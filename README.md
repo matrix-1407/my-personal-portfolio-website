@@ -56,4 +56,3 @@ Upcoming architectural migrations include:
 
 ---
 *Created and maintained by [Mrudul Bokade](https://github.com/matrix-1407).*
-*“Building interfaces & backends — learning cloud the hard way | DevOps-curious · ‘it works on my machine’ survivor!”*
