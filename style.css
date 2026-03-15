@@ -697,6 +697,7 @@ hr {
 
 /* ===== PROJECT SECTION ===== */
 .project {
+  position: relative;
   margin: 160px 200px;
   display: flex;
   align-items: center;
@@ -756,6 +757,8 @@ hr {
 
 /* PROJECT CARD */
 .project-card {
+  position: relative;
+  overflow: hidden;
   background: var(--glass-bg);
   border: var(--glass-border);
   padding: 22px;
@@ -836,6 +839,7 @@ hr {
 }
 
 .about {
+  position: relative;
   margin: 160px 200px;
   color: #f2f2f2;
 }
@@ -861,6 +865,8 @@ hr {
 
 /* BASE BENTO CARD */
 .bento-card {
+  position: relative;
+  overflow: hidden;
   background: var(--bg-surface);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
@@ -951,7 +957,9 @@ hr {
 }
 
 /* GLOW BACKGROUND */
-.services::before {
+.services::before,
+.project::before,
+.about::before {
   content: "";
   position: absolute;
   top: 20%;
@@ -997,7 +1005,9 @@ hr {
 }
 
 /* SHINE EFFECT */
-.service-card::before {
+.service-card::before,
+.project-card::before,
+.bento-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1011,9 +1021,13 @@ hr {
     transparent
   );
   transition: 0.6s;
+  z-index: 10;
+  pointer-events: none;
 }
 
-.service-card:hover::before {
+.service-card:hover::before,
+.project-card:hover::before,
+.bento-card:hover::before {
   left: 120%;
 }
 
