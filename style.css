@@ -711,9 +711,9 @@ hr {
 
 /* TITLE */
 .project h1 {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-display);
   padding-bottom: 10px;
-  color: #ff4d6d;
+  color: var(--text-primary);
   letter-spacing: 1px;
 }
 
@@ -729,7 +729,7 @@ hr {
   width: 80px;
   height: 3px;
   border: none;
-  background: linear-gradient(90deg, #ff4d6d, #7a0c2e);
+  background: var(--accent-primary);
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -756,12 +756,12 @@ hr {
 
 /* PROJECT CARD */
 .project-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 80, 120, 0.25);
+  background: var(--glass-bg);
+  border: var(--glass-border);
   padding: 22px;
   border-radius: 18px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 25px rgba(255, 80, 120, 0.15);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: 0.35s ease;
 }
 
@@ -781,12 +781,12 @@ hr {
   width: 100%;
   border-radius: 14px;
   margin-bottom: 15px;
-  border: 1px solid rgba(255, 80, 120, 0.25);
+  border: var(--glass-border);
 }
 
 /* TITLE */
 .project-card h3 {
-  color: #ff9db3;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
@@ -804,9 +804,9 @@ hr {
   padding: 6px 12px;
   font-size: 11px;
   border-radius: 20px;
-  color: #ff9db3;
-  border: 1px solid rgba(255, 80, 120, 0.4);
-  background: rgba(255, 80, 120, 0.08);
+  color: var(--accent-secondary);
+  border: var(--glass-border);
+  background: var(--glass-bg);
 }
 
 /* BUTTONS */
@@ -820,15 +820,19 @@ hr {
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 13px;
-  color: #fff;
-  background: linear-gradient(135deg, #ff4d6d, #7a0c2e);
+  color: #000;
+  background: var(--accent-primary);
   text-decoration: none;
   transition: 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .project-card .btn:hover {
-  box-shadow: 0 0 18px rgba(255, 80, 120, 0.6);
+  box-shadow: 0 0 18px var(--glass-highlight);
   transform: translateY(-2px);
+  background: transparent;
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .about {
