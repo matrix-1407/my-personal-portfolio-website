@@ -1613,6 +1613,7 @@ hr {
 }
 
 /* RESPONSIVE */
+@media (max-width: 900px) {
   /* Intro Responsiveness */
   #intro {
     height: auto;
@@ -1695,7 +1696,7 @@ hr {
     font-size: 13px;
   }
   .ul-list li svg {
-    display: none; /* Hide icons on very small screens to save space */
+    display: none;
   }
 
   /* Projects section padding fix */
