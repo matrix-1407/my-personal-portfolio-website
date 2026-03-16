@@ -1614,47 +1614,65 @@ hr {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  /* Global Mobile Resets */
+  .main {
+    width: 100%;
+    padding: 0 15px;
+  }
+
   /* Intro Responsiveness */
   #intro {
     height: auto;
-    padding: 100px 0;
+    padding: 60px 0;
   }
   .card {
     padding: 30px 20px;
     border-radius: 16px;
+    width: 100% !important;
   }
   .content {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     text-align: center;
   }
   .left h1 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.2;
   }
   .desc {
     margin: 12px auto 20px;
     font-size: 14px;
+    max-width: 100%;
   }
   .buttons, .site-link, .live-line {
     justify-content: center;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
   }
+  .btn {
+    width: 100%; /* Full width buttons for easier tapping on mobile */
+    justify-content: center;
+  }
   .orbit-box {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   .core {
-    inset: 40px;
+    inset: 35px;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 12px;
   }
   .stats h4 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* Contact & Bento Responsiveness */
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     text-align: center;
   }
 
@@ -1671,29 +1689,20 @@ hr {
     grid-template-rows: auto;
   }
 
-  .bento-hero,
-  .bento-wide {
-    grid-column: span 1;
-    grid-row: span 1;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .bento-wide {
-    flex-direction: column;
-  }
-
   /* Header & Navigation Fixes */
   .div-list {
-    width: 95%;
+    width: calc(100% - 30px);
+    margin: 0 15px;
   }
   .ul-list {
-    gap: 10px;
-    padding: 10px;
+    gap: 8px;
+    padding: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .ul-list li a {
-    font-size: 13px;
+    font-size: 11px;
+    padding: 4px 8px;
   }
   .ul-list li svg {
     display: none;
@@ -1701,26 +1710,38 @@ hr {
 
   /* Projects section padding fix */
   #project {
-    padding: 60px 15px;
+    padding: 50px 0;
   }
 
   /* Grid Overrides for Mobile */
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 15px;
+    padding: 0 15px;
   }
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: 0 15px;
   }
   .project-card {
-    padding: 24px;
+    padding: 20px;
+    width: 100% !important;
   }
   .project-card h3 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .project-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .project-actions a {
+    width: 100%;
+    justify-content: center;
   }
   .skill-card {
     padding: 20px;
+    width: 100% !important;
   }
 }
 
