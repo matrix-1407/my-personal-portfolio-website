@@ -1615,7 +1615,7 @@ hr {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   /* Global Mobile Resets */
-  .main, .card, .home, .project, .about, .services, .section-container {
+  .main, .card, .home, .project, .about, .services, #blog, .section-container {
     width: 100% !important;
     margin: 40px 0 !important; /* Force reset large 200px margins */
     padding-left: 15px !important;
