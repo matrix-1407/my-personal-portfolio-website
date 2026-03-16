@@ -11,48 +11,26 @@
 
 Welcome to the codebase for my personal portfolio! This repository currently houses **Phase 1: Vanilla Web Revamp**, combining custom HTML, CSS, and lightweight JS to create a highly optimized, distinct web experience before advancing to modern frameworks.
 
-## ✨ Design Concept & Features
-The aesthetic philosophy is built around a dark, sleek, cyberpunk-inspired matrix theme with strong glassmorphism UI rules (translucent cards, blur effects, structural borders).
+✨ **Design Concept & Features**
 
-- **Responsive "Bento Box" Grid**: A customized, adaptive CSS Grid layout for elegantly showcasing engineering skills, hobbies, and biography data.
-- **Glassmorphism Theme System**: Hand-coded CSS variable tokens (`var(--glass-bg)`, `var(--glass-border)`) for easy manipulation of highlights, neon cyan/green accents, and backdrop filters without relying on heavy frontend frameworks.
-- **Micro-Animations & Motion**: 
-  - Fast 2.2-second "Neural Link" initialization load screen. 
-  - Elegant scroll-fade triggers via JS Intersection Observers.
-  - Interactive hover transitions across all buttons and bento cards.
-- **SVG-first Iconography**: Utilizing scalable vector graphics exclusively—no clunky external icon libraries or standard emojis, ensuring crisp visuals on any resolution.
+The aesthetic philosophy is built around a dark, sleek, cyberpunk-inspired **Matrix theme** with strong **glassmorphism UI** rules (translucency, blur effects, and structural borders).
 
-## 🛠️ Tech Stack (Current Build)
-- **HTML5:** Semantic structure, accessible button landmarks, and inline SVGs.
-- **CSS3:** Native variable tokens, advanced flexbox/grid architecture, and programmatic keyframe animations.
-- **Vanilla JavaScript:** DOM node manipulation, interaction timing, and lightweight Intersection Observers.
+*   **Responsive Layout:** A customized, adaptive CSS Grid architecture designed for elegantly showcasing engineering skills, featured projects, and professional background.
+*   **Glassmorphism Theme System:** Hand-coded CSS variable tokens (`--glass-bg`, `--glass-border`) for precise manipulation of highlights, neon cyan/green accents, and backdrop filters without the overhead of heavy frameworks.
+*   **Interactive Matrix Terminal:** A custom-built JavaScript terminal overlay that provides a unique way to explore project archives and system logs, enhancing the hacker-inspired user experience.
+*   **Micro-Animations & Motion:**
+    *   **Neural Link Initialization:** A fast, immersive landing sequence.
+    *   **Scroll-Fade Triggers:** Seamless content appearance via JS Intersection Observers.
+    *   **Dynamic Hover States:** Interactive transitions across all interactive elements, providing immediate visual feedback.
+*   **SVG-first Iconography:** Utilizing scalable vector graphics exclusively ensuring crisp visuals on any resolution without external overhead.
 
-## 🚀 Getting Started
+🛠️ **Tech Stack (Current Build)**
 
-To view the project locally, no build steps or dependencies are required:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/matrix-1407/my-personal-portfolio-website.git
-   ```
-2. Navigate into the directory:
-   ```bash
-   cd my-personal-portfolio-website
-   ```
-3. Run a local server (optional, but recommended for avoiding CORS issues with local assets):
-   ```bash
-   python -m http.server 3000
-   ```
-   *Then visit `http://localhost:3000` in your browser.*
-   
-   *Alternatively, just double click the `index.html` file to open it directly.*
-
-## 🔮 Looking Ahead: Phase 2
-This vanilla codebase acts as the foundational UI blueprint! 
-Upcoming architectural migrations include:
-- **React + Vite Migration:** Upgrading to a modern, robust SPA structure.
-- **3D Integrations:** Implementing `Three.js` / `@react-three/fiber` for interactive background elements.
-- **Backend/CMS:** Wiring up a database to handle dynamic blog and project content.
+*   **HTML5:** Semantic architecture with accessible landmarks and inline SVGs.
+*   **CSS3:** Native variable tokens, advanced flexbox/grid architecture, and programmatic keyframe animations.
+*   **Vanilla JavaScript:** DOM orchestration, interaction timing, and efficient multi-section logic.
+*   **Form Integration:** AJAX-powered submission handling via Formspree API.
+*   **Deployment:** CI/CD integration with Vercel for high-speed delivery.
 
 ---
 *Created and maintained by [Mrudul Bokade](https://github.com/matrix-1407).*
