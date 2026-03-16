@@ -1116,8 +1116,8 @@ hr {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -1196,11 +1196,11 @@ hr {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 30px;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
   max-width: 1200px;
   margin: 40px auto;
+  padding: 0 20px;
 }
 
 .project-card {
@@ -1613,7 +1613,44 @@ hr {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+  /* Intro Responsiveness */
+  #intro {
+    height: auto;
+    padding: 100px 0;
+  }
+  .card {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .left h1 {
+    font-size: 32px;
+  }
+  .desc {
+    margin: 12px auto 20px;
+    font-size: 14px;
+  }
+  .buttons, .site-link, .live-line {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .orbit-box {
+    width: 200px;
+    height: 200px;
+  }
+  .core {
+    inset: 40px;
+  }
+  .stats h4 {
+    font-size: 18px;
+  }
+
+  /* Contact & Bento Responsiveness */
   .contact-content {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -1644,6 +1681,26 @@ hr {
 
   .bento-wide {
     flex-direction: column;
+  }
+
+  /* Header & Navigation Fixes */
+  .div-list {
+    width: 95%;
+  }
+  .ul-list {
+    gap: 10px;
+    padding: 10px;
+  }
+  .ul-list li a {
+    font-size: 13px;
+  }
+  .ul-list li svg {
+    display: none; /* Hide icons on very small screens to save space */
+  }
+
+  /* Projects section padding fix */
+  #project {
+    padding: 80px 15px;
   }
 }
 
