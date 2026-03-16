@@ -1116,8 +1116,8 @@ hr {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -1196,8 +1196,8 @@ hr {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -1701,7 +1701,26 @@ hr {
 
   /* Projects section padding fix */
   #project {
-    padding: 80px 15px;
+    padding: 60px 15px;
+  }
+
+  /* Grid Overrides for Mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-card {
+    padding: 24px;
+  }
+  .project-card h3 {
+    font-size: 20px;
+  }
+  .skill-card {
+    padding: 20px;
   }
 }
 
