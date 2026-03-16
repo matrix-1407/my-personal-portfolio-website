@@ -120,3 +120,67 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+// ===============================
+// CONTACT FORM SUBMISSION (FORMSPREE AJAX)
+// ===============================
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const status = document.createElement("div");
+    status.className = "form-status";
+    status.style.marginTop = "20px";
+    status.style.fontSize = "14px";
+    status.style.fontFamily = "var(--font-ui)";
+    
+    // Remove old status if exists
+    const oldStatus = contactForm.querySelector('.form-status');
+    if (oldStatus) oldStatus.remove();
+    
+    contactForm.appendChild(status);
+
+    const formData = new FormData(e.target);
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "SENDING...";
+    status.innerHTML = "Establishing link...";
+    status.style.color = "var(--accent-secondary)";
+
+    try {
+      const response = await fetch(e.target.action, {
+        method: "POST",
+        body: new URLSearchParams(formData).toString(),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        status.innerHTML = "MESSAGE RECEIVED. SECURE CONNECTION CLOSED.";
+        status.style.color = "var(--accent-primary)";
+        contactForm.reset();
+        setTimeout(() => {
+          status.remove();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }, 5000);
+      } else {
+        const errorData = await response.json();
+        console.error("Formspree Error:", errorData);
+        throw new Error(errorData.error || "Submission failed");
+      }
+    } catch (error) {
+      console.error("Contact Form Failure:", error);
+      status.innerHTML = `LINK FAILURE: ${error.message || "PLEASE TRY AGAIN LATER."}`;
+      status.style.color = "#ff4444";
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+      setTimeout(() => status.remove(), 5000);
+    }
+  });
+}
