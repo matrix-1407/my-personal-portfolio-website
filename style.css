@@ -1615,20 +1615,41 @@ hr {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   /* Global Mobile Resets */
-  .main {
+  .main, .card, .home, .project, .about, .services, .section-container {
+    width: 100% !important;
+    margin: 40px 0 !important; /* Force reset large 200px margins */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Header & Navigation Fixes */
+  .div-list {
     width: 100%;
-    padding: 0 15px;
+    margin: 0;
+  }
+  .ul-list {
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  .ul-list li a {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+  .ul-list li svg {
+    display: none;
   }
 
   /* Intro Responsiveness */
   #intro {
     height: auto;
-    padding: 60px 0;
+    padding: 80px 0 40px;
   }
   .card {
-    padding: 30px 20px;
+    padding: 30px 15px !important;
     border-radius: 16px;
-    width: 100% !important;
   }
   .content {
     flex-direction: column;
@@ -1636,7 +1657,7 @@ hr {
     text-align: center;
   }
   .left h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.2;
   }
   .desc {
@@ -1647,101 +1668,71 @@ hr {
   .buttons, .site-link, .live-line {
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 10px;
   }
   .btn {
-    width: 100%; /* Full width buttons for easier tapping on mobile */
+    width: 100%; 
     justify-content: center;
   }
   .orbit-box {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
   .core {
-    inset: 35px;
+    inset: 30px;
   }
   .stats {
     flex-direction: column;
-    gap: 12px;
-  }
-  .stats h4 {
-    font-size: 20px;
+    gap: 8px;
   }
 
-  /* Contact & Bento Responsiveness */
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .contact-item {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
+  /* Bento Grid Mobile Layout */
   .bento-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    max-width: 100%;
+    padding: 0;
+  }
+  .bento-hero, .bento-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+    text-align: center;
+    align-items: center;
+    padding: 24px;
+  }
+  .bento-wide {
+    flex-direction: column;
+  }
+  .bento-hero h4 {
+    font-size: 24px;
   }
 
-  /* Header & Navigation Fixes */
-  .div-list {
-    width: calc(100% - 30px);
-    margin: 0 15px;
-  }
-  .ul-list {
-    gap: 8px;
-    padding: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .ul-list li a {
-    font-size: 11px;
-    padding: 4px 8px;
-  }
-  .ul-list li svg {
-    display: none;
-  }
-
-  /* Projects section padding fix */
-  #project {
-    padding: 50px 0;
-  }
-
-  /* Grid Overrides for Mobile */
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 0 15px;
-  }
-  .projects-grid {
+  /* Project Grid & Sections */
+  .projects-container, .skills-grid, .projects-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 15px;
+    padding: 0;
   }
-  .project-card {
-    padding: 20px;
+  .project-card, .skill-card {
     width: 100% !important;
+    padding: 20px;
   }
   .project-card h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
-  .project-actions {
+  .project-card .btns {
     flex-direction: column;
-    gap: 10px;
   }
-  .project-actions a {
+  .project-card .btn {
     width: 100%;
-    justify-content: center;
+    text-align: center;
   }
-  .skill-card {
-    padding: 20px;
-    width: 100% !important;
+
+  /* Contact responsiveness */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
   }
 }
 
