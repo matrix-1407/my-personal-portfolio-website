@@ -1192,6 +1192,146 @@ hr {
   color: var(--text-primary);
 }
 
+/* ================= PROJECTS SECTION ================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.project-card {
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: 16px;
+  padding: 35px;
+  backdrop-filter: var(--glass-blur);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(6, 182, 212, 0.05),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover::before {
+  transform: translateX(100%);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.project-header i {
+  font-size: 24px;
+  color: var(--accent-secondary);
+}
+
+.project-header h3 {
+  font-size: 22px;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.proj-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-ui);
+}
+
+.project-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-git, .btn-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-git {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn-git:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-primary);
+}
+
+.btn-live {
+  background: var(--accent-primary);
+  color: #000;
+  border: 1px solid var(--accent-primary);
+}
+
+.btn-live:hover {
+  background: transparent;
+  color: var(--accent-primary);
+  box-shadow: 0 0 15px var(--glass-highlight);
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= CONTACT SECTION ================= */
 
 #contact {

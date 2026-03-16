@@ -577,39 +577,107 @@
         <h1>Featured Work</h1>
         <hr />
 
-        <div
-          class="projects-container"
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 0;
-          "
-        >
-          <div
-            class="project-card"
-            style="width: 100%; max-width: 600px; padding: 60px 40px"
-          >
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              style="color: var(--accent-primary); margin-bottom: 20px"
-            >
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-            <h3 style="margin-bottom: 12px">Project Placeholders</h3>
-            <p>
-              We will fill these up after discussing the specific projects you'd
-              like to highlight.
-            </p>
+        <div class="projects-grid">
+          <!-- PharmaGuard UI -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-microscope"></i>
+                <h3>PharmaGuard (UI)</h3>
+              </div>
+              <p class="project-description">
+                AI-Assisted Pharmacogenomic Risk Assessment frontend that parses genomic VCF files to detect gene variants and predicts drug-specific risks with explainable AI insights.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">React.js</span>
+                <span class="proj-tag">Vite</span>
+                <span class="proj-tag">Tailwind</span>
+                <span class="proj-tag">GenAI</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://pharmaguard-ui.vercel.app" target="_blank" class="btn-live">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/matrix-1407/pharmaguard-ui" target="_blank" class="btn-git">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PharmaGuard Backend -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-server"></i>
+                <h3>PharmaGuard (API)</h3>
+              </div>
+              <p class="project-description">
+                High-performance Python (FastAPI) backend for clinical pharmacogenomic analysis. Implements workflow orchestration for VCF parsing and CPIC guideline alignment.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">Python</span>
+                <span class="proj-tag">FastAPI</span>
+                <span class="proj-tag">Docker</span>
+                <span class="proj-tag">REST APIs</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/matrix-1407/pharmaguard-backend" target="_blank" class="btn-git">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- FlickMate -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-film"></i>
+                <h3>FlickMate</h3>
+              </div>
+              <p class="project-description">
+                A social movie discovery platform featuring real-time recommendations, watchlists, and social sharing. Built with a focus on premium UI and robust backend architecture.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">TypeScript</span>
+                <span class="proj-tag">Supabase</span>
+                <span class="proj-tag">PostgreSQL</span>
+                <span class="proj-tag">Auth</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://flick-mate.vercel.app/" target="_blank" class="btn-live">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/matrix-1407/FlickMate" target="_blank" class="btn-git">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <i class="fas fa-code"></i>
+                <h3>Portfolio Website</h3>
+              </div>
+              <p class="project-description">
+                "My Corner in Matrix" — A modern, high-performance portfolio featuring glassmorphism, custom animations, and an interactive Matrix Terminal for project execution.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">HTML5</span>
+                <span class="proj-tag">CSS3</span>
+                <span class="proj-tag">JS</span>
+                <span class="proj-tag">Animations</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/matrix-1407/my-personal-portfolio-website" target="_blank" class="btn-git">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div style="text-align: center; margin-top: 20px">
